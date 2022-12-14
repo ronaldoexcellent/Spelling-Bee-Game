@@ -1,0 +1,291 @@
+#loader, #paused {
+    background: hsl(0, 6%, 90%);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    display: none;
+    z-index: 50;
+    overflow-x: hidden;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+#paused {
+    display: grid;
+    transform: scale(0);
+    transition: 1s;
+}
+
+.boxes1, .boxes2 {
+    background: rgb(126, 2, 126);
+    border: 4px dashed rgb(126, 224, 126);
+    width: 15px;
+    height: 15px;
+    padding: 2%;
+    border-radius: 50%;
+}
+
+.boxes1 {
+    animation: boxes-effect1 1s linear infinite
+}
+
+.boxes2 {
+    animation: boxes-effect2 1s linear infinite
+}
+
+@keyframes boxes-effect1 {
+    0% {
+        opacity: 0
+    }
+    50% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
+}
+@keyframes boxes-effect2 {
+    0% {
+        opacity: 1
+    }
+    50% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+#preview, #registry {
+    background: hsl(0, 6%, 90%);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    display: grid;
+    z-index: 10;
+    overflow-x: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+#preview {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+#registry {
+    z-index: 50;
+    width: 0;
+    right: 0;
+    top: 0;
+    transition: 1s;
+    text-transform: uppercase;
+}
+
+#mainmenu {
+    background: url('../media/images/1619503.jpg') center no-repeat;
+    background-color: darkslategrey;
+    height: 100%;
+    width: 0;
+    transition: 1.5s;
+    position: fixed;
+    display: grid;
+    z-index: 20;
+    overflow-x: hidden;
+    top: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    font-size: larger;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.groups {
+    display: none
+}
+
+#settings {
+    width: 100%;
+    background:rgb(41, 40, 40);
+    display: none;
+    padding: 1%;
+    color: white;
+    font-weight: bold;
+    height: 100%;
+}
+
+.mainmenu_btns {
+    background: rgb(41, 40, 40);
+    color: #fcf805;
+    width: 250px;
+    padding: 4%;
+    cursor: none;
+    animation: none;
+    opacity: 1;
+    box-shadow:3px 3px 7px grey;
+}
+
+input[type=text] {
+    background: rgb(21, 0, 24);
+    color: white;
+    font-size: larger;
+    letter-spacing: 3px;
+    font-family: impact;
+    width: 250px;
+    padding: 4%;
+    box-shadow:3px 3px 7px grey;
+}
+
+#on-btn {
+    background: green;
+}
+
+#on-btn, #off-btn {
+    color: orange;
+    padding: 3%;
+    font-weight: 400;
+}
+
+#bgColor, #fontColor {
+    background: white;
+    color: black;
+    font-size: larger;
+    letter-spacing: 2.5px;
+    font-family: verdana;
+    width: 200px;
+    padding: 4%;
+    box-shadow: none;
+}
+
+#registrar {
+    text-transform: capitalize;
+}
+
+.mainmenu_btns:hover, .mainmenu_btns:focus {
+    border-radius:50px;
+    animation: btn-effect .7s linear infinite
+}
+
+@keyframes btn-effect {
+    0% {
+        color:rgb(252, 252, 252);
+        background: #ffff00;
+    }
+    100% {
+        color:rgb(252, 252, 252);
+        background: hsl(120, 99%, 50%);
+    }
+}
+
+#questions {
+    background: slategrey;
+    z-index: 35;
+    transition: 0.8s;
+    display: flex;
+    position: fixed;
+    height: 100%;
+    width: 0;
+    z-index: 40;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+::-webkit-scrollbar {
+    display: block;
+    width: 30px;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 20px;
+    background: yellow;
+    border: 2px solid red;
+}
+
+::-webkit-scrollbar-thumb {
+    background: green;
+    border: 2px dashed white;
+    border-radius: 20px;
+}
+
+#question-board {
+    transform: scale(0);
+    transition: 0.5s;
+    word-spacing: 0.4em;
+    background: white;
+    color: black;
+    padding: 4%;
+    width: 50%;
+    border-radius: 5%;
+    border: 1px inset white;
+    box-shadow:5px 5px 3px grey
+    }
+
+@media screen and (max-width: 1000px) {
+    #question-board {
+        width: 98%;
+        border-radius: 0;
+    }
+}
+
+    #timing {
+        border: 3px dashed black;
+        border-radius: 50%;
+        padding: 3%;
+        font-weight: bolder;
+        font-size: xx-large;
+        float: right;
+        position: relative;
+        transition: 2s;
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    #phrase {
+        transition: 1s;
+        font-weight: bolder;
+        font-size: 1.87em;
+    }
+    #instruction {
+        color: slategrey;
+        opacity: 0.9;
+    }
+    #phrase_number {
+        transition: 3.5s;
+    }
+    #wordinput {
+    text-transform: lowercase;
+    display: none;
+    transition: 0.5s;
+    }
+    #wordinput:hover {
+    border-bottom: 2px inset blue;
+    }
+    #wordinput:active, #wordinput:focus {
+    border-bottom: 2px dotted blue;
+    }
+    .fa-check-circle {
+        color: green;
+    }
+    .fa-times {
+        color: red;
+    }
+    #dbtn {
+        transform: scale(0);
+        transition: 0.3s;
+    }
+    #nbtn {
+    transform: scale(0);
+    transition: 0.3s;
+    }

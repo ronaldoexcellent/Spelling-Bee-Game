@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Spelling bee game written by Ronaldo Excellent. Development began on Wednesday 3oth March, 2022, and finished on " />
+        <meta name="copyright" content="Copyright 2020" />
+        <title>
+            Spelling Bee Game By Ronaldo Excellent
+        </title>
+	   <link rel="stylesheet" href="assets/Font awesome/fontawesome-6.0.0/css/all.css" />
+
+        <link rel="stylesheet" href="assets/index.css" />
+    
+	   <script src="Font awesome/fontawesome-6.0.0/js/all.js"></script>
+
+        <script>
+		 alert("Javascript Support Confirmed!");
+
+            alert("Your screen size is " + screen.width + " x " + screen.height + ". Therefore, this app will be optimized to your device resolution.");
+            
+                function redirect () {
+                    if (screen.width > 1000 && screen.height > 500) {
+                    window.open('main/index.html', '_blank', 'resizable=no, copyhistory=0, menubar=no, status=no, scrollbars=no, location=no, directories=no, toolbar=yes, width=700, height=700, left=162');
+                    }
+
+                    else {
+                        window.open('main/index.html', '_blank', 'resizable=no, copyhistory=0, menubar=no, status=no, scrollbars=no, location=no, directories=no, toolbar=yes, height=' + screen.height + ', width=' + screen.width);
+                    }
+                }
+        </script>
+    </head>
+
+    <body>
+        <noscript>Please enabled Javascript for this app to function.</noscript>
+        <div>
+            <center>
+                <figure>
+                    <img src="media/images/bg_startup.jpg" width="300" height="300" /> 
+                <figcaption> 
+                    <h2 style="color:darkblue; text-shadow:1px 1px 2px white">By Ronaldo Excellent</h2>  
+            
+                    <button class="mainmenu_btns" style="border-radius:50px; cursor:pointer; padding: 2%; width: ; box-shadow:4px 4px 7px grey; text-shadow:2px 2px 3px red; font-size:x-large; font-weight:bolder" onclick="redirect(); localStorage.clear()"> <li class="fa fa-play-circle"></li> Play </button>
+                    </figcaption> 
+                </figure>
+            </center>
+
+        </div>
+
+    </body>
+</html>
